@@ -1,0 +1,71 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Dark background color */
+body {
+    background-color: #313131;
+    color: #fef3f3; /* Light text color */
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #000; /* Dark background for the navbar */
+    color: #fff; /* Light text color for navbar links */
+}
+
+/* Style the links in the navbar */
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Change link color on hover */
+.navbar a:hover {
+    color: #007AFF; /* Apple's blue color */
+}
+
+/* Form label styles */
+.form-label {
+    color: #ffffff;
+}
+
+/* Form input styles */
+.form-control {
+    background-color: #363636; /* Dark form background color */
+    color: #ffffff;
+    border: 1px solid #007AFF; /* Apple's blue color */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Style primary buttons */
+.btn-primary {
+    background-color: #007AFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Style tweets */
+.tweet {
+    background-color: #363636; /* Dark tweet background color */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Add more styles as needed */
