@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MUJ Broadcast</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">MUJ Broadcast</a>
+            {% if user %}
+            <span class="navbar-text">
+                Welcome, {{ user.username }}! <a href="/logout" class="btn btn-outline-light btn-sm">Logout</a>
+            </span>
+            {% endif %}
+        </div>
+    </nav>
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="mt-3">
+            <ul class="list-unstyled">
+                {% for message in messages %}
+                <li class="alert alert-{{ message.category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        {% block content %}
+        {% endblock %}
+    </div>
+    <footer class="mt-5">
+        <div class="container">
+            <p>Made by Manoviraj Gill </p>
+        </div>
+    </footer>
+</body>
+</html>
